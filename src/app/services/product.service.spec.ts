@@ -33,7 +33,7 @@ describe('ProductService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should retrieve product data', async(() => {
+  it('should retrieve raw product data', async(() => {
 
     // tslint:disable-next-line: max-line-length
     const mockData = '{ "pagination": { "next": null, "total": 1, "page": 1, "previous": null }, "data": [{ "numericalId": 974, "sequence": 0, "image": [{ "url": "", "width": 525, "repeatable": false, "context": "offer", "height": 242 }, { "url": "", "width": 480, "repeatable": false, "context": "menu-product", "height": 480 }] }, { "numericalId": 416, "sequence": 1, "image": [] }] }';
@@ -44,13 +44,40 @@ describe('ProductService', () => {
         conn.mockRespond(new Response(new ResponseOptions(({ status: 200, body: mockData }))));
     });
 
-    let response;
-    service.getProductDataByCompanyId(1).subscribe((data: any) => {
-      response = data;
+    service.getRawProductDataByCompanyId(1).subscribe((productData: any) => {
+      expect(productData).toBeTruthy();
+      expect(productData.data[0].numericalId).toBe(974);
+    });
+  }));
+
+  it('should create a product map', async(() => {
+
+    const mockData = require('../../assets/test/product-data.json');
+
+    // Listen and return the mock data.
+    mockBackend.connections.subscribe((connection: MockConnection) => {
+      connection.mockRespond(new Response(new ResponseOptions({ status: 200, body: mockData })));
     });
 
-    expect(response).toBeDefined();
-    expect(response.data[0].numericalId).toBe(974);
+    service.getProductDataByCompanyId(1).subscribe((productMap: Map<number, any>) => {
+      expect(productMap).toBeDefined();
+      expect(productMap.size).toBeGreaterThan(0);
+
+      expect(productMap.get(441)).toBeTruthy();
+      expect(productMap.get(441)).toEqual(jasmine.objectContaining({
+        numericalId: 441,
+        name: 'Tomate e Manjericão',
+        type: 'menu-item'
+      }));
+
+      expect(productMap.get(444)).toBeTruthy();
+      expect(productMap.get(444)).toEqual(jasmine.objectContaining({
+        numericalId: 444,
+        name: 'Penne',
+        type: 'simple'
+      }));
+    });
+
   }));
 
 });

@@ -1,0 +1,89 @@
+{
+    "numericalId": 1,
+    "geoLat": "-22.9829760000",
+    "openingTimes": null,
+    "image": [
+        {
+            "url": "http://images.onyo.com/wz96lSQBOwkiLVJqstCQt4aNMLI=/229x4:764x540/fit-in/240x240/https://onyo.s3.amazonaws.com/picture/8563e2759ca64e57991954c805e160ca.jpg",
+            "width": 535,
+            "repeatable": false,
+            "context": "company-thumbnail-small",
+            "height": 536
+        },
+        {
+            "url": "http://images.onyo.com/KpYiVBFxYNq_Se4QmzNv9_hiIPA=/182x76:960x511/fit-in/912x510/https://onyo.s3.amazonaws.com/picture/83a3a54221484d69872cf90927b3a4ae.jpg",
+            "width": 778,
+            "repeatable": false,
+            "context": "company-main",
+            "height": 435
+        },
+        {
+            "url": "http://images.onyo.com/iR3p7zQILgjLZn9UEqHcj1MozFc=/0x42:960x960/fit-in/408x390/https://onyo.s3.amazonaws.com/picture/c4243080c1fd4831bbfb86355e861bcb.jpg",
+            "width": 960,
+            "repeatable": false,
+            "context": "company-thumbnail-medium",
+            "height": 918
+        }
+    ],
+    "address": "Rua Barão da Torre, 446 Ipanema - Rio de Janeiro, Rio de Janeiro - 22411-002",
+    "id": "http://api.staging.onyo.com/v1/mobile/company/1",
+    "categories": [
+        {
+            "numericalId": 26,
+            "name": "Massas",
+            "parent": null,
+            "brand": "http://api.staging.onyo.com/v1/mobile/brand/1",
+            "id": "http://api.staging.onyo.com/v1/mobile/category/26",
+            "image": [
+                {
+                    "url": "http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png",
+                    "width": 450,
+                    "repeatable": false,
+                    "context": "category-background",
+                    "height": 480
+                }
+            ],
+            "order": 10
+        },
+        {
+            "numericalId": 28,
+            "name": "Sucos e Bebidas",
+            "parent": null,
+            "brand": "http://api.staging.onyo.com/v1/mobile/brand/1",
+            "id": "http://api.staging.onyo.com/v1/mobile/category/28",
+            "image": [
+                {
+                    "url": "http://images.onyo.com/57DlOPR6LofdyACAcEsV2JkZ0U0=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/3295c2065362401a918301d252bcafa4.png",
+                    "width": 450,
+                    "repeatable": false,
+                    "context": "category-background",
+                    "height": 480
+                }
+            ],
+            "order": 13
+        }
+    ],
+    "displayName": "Ipanema",
+    "name": "Gula Gula Ipanema",
+    "menu": "http://api.staging.onyo.com/v1/mobile/brand/1",
+    "menus": [
+        {
+            "numericalId": 1,
+            "id": "http://api.staging.onyo.com/v1/mobile/menu/1",
+            "categories": [
+                "http://api.staging.onyo.com/v1/mobile/category/26",
+                "http://api.staging.onyo.com/v1/mobile/category/28"
+            ]
+        },
+        {
+            "numericalId": 2,
+            "id": "http://api.staging.onyo.com/v1/mobile/menu/2",
+            "categories": [
+                "http://api.staging.onyo.com/v1/mobile/category/26",
+                "http://api.staging.onyo.com/v1/mobile/category/28"
+            ]
+        }
+    ],
+    "geoLon": "-43.2077172000",
+    "brand": "http://api.staging.onyo.com/v1/mobile/brand/1"
+}

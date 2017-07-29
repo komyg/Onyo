@@ -45,12 +45,41 @@ describe('CompanyService', () => {
     });
 
     let response;
-    service.getCompanyDataById(1).subscribe((data: any) => {
+    service.getRawCompanyDataById(1).subscribe((data: any) => {
       response = data;
     });
 
     expect(response).toBeDefined();
     expect(response.numericalId).toBe(1);
+  }));
+
+  it('should retrieve category data as a map', async(() => {
+
+    const mockData = require('../../assets/test/company-data.json');
+
+    // Listen and return the mock data.
+    mockBackend.connections.subscribe(
+      (conn: MockConnection) => {
+        conn.mockRespond(new Response(new ResponseOptions(({ status: 200, body: mockData }))));
+    });
+
+    service.getCategoriesById(1).subscribe((categoryMap: Map<number, any>) => {
+      expect(categoryMap).toBeDefined();
+      expect(categoryMap.size).toBeGreaterThan(0);
+
+      expect(categoryMap.get(26)).toBeTruthy();
+      expect(categoryMap.get(26)).toEqual(jasmine.objectContaining({
+        numericalId: 26,
+        name: 'Massas'
+      }));
+
+      expect(categoryMap.get(28)).toBeTruthy();
+      expect(categoryMap.get(28)).toEqual(jasmine.objectContaining({
+        numericalId: 28,
+        name: 'Sucos e Bebidas'
+      }));
+    });
+
   }));
 
 });

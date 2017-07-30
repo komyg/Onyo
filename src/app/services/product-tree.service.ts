@@ -42,11 +42,16 @@ export class ProductTreeService {
     for (const productKey of Array.from(products.keys())) {
       const product = products.get(productKey);
 
-      const parentCategoryId = ProductUrlHelper.getIdFromUrl(product.getData().category);
-      const category = categories.get(parentCategoryId);
+      if (product.getData().category) {
+        const parentCategoryId = ProductUrlHelper.getIdFromUrl(product.getData().category);
+        const category = categories.get(parentCategoryId);
 
-      category.children.set(product.getId(), product);
-      product.parent = category;
+        category.children.set(product.getId(), product);
+        product.parent = category;
+      }
+      else {
+        console.warn('Product with null category: ' + productKey);
+      }
     }
 
     return categories;
@@ -101,11 +106,16 @@ export class ProductTreeService {
       const childId = ProductUrlHelper.getIdFromUrl(productUrl);
 
       // Create a new child.
-      const child = new Node(productData.get(childId));
-      root.children.set(childId, child);
-      child.parent = root;
+      if (productData.has(childId)) {
+        const child = new Node(productData.get(childId));
+        root.children.set(childId, child);
+        child.parent = root;
 
-      this.addChildNodesToNode(child, productData);
+        this.addChildNodesToNode(child, productData);
+      }
+      else {
+        console.warn('Child id not found: ' + childId);
+      }
     }
   }
 

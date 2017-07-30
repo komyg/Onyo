@@ -279,6 +279,85 @@
     "fullDescription": "-",
     "products": [],
     "redeemable": false
-  }
+  },
+	{
+	  "numericalId": 283,
+	  "sequence": 1,
+	  "image": [
+	      {
+	          "url": "http://images.onyo.com/-Wnvgie10My_3R-zgsnTe8tS-wM=/0x0:780x780/fit-in/780x780/https://onyo.s3.amazonaws.com/picture/9f3d5f9e34674af1a39b19586ed5e04d.jpg",
+	          "width": 780,
+	          "repeatable": false,
+	          "context": "product-detail",
+	          "height": 780
+	      },
+	      {
+	          "url": "http://images.onyo.com/ZD47TTjuyxw4HBU-6gD8laFjt_U=/0x0:471x402/fit-in/471x402/https://onyo.s3.amazonaws.com/picture/43a2669630804fe699a38c6ea65592cd.jpg",
+	          "width": 471,
+	          "repeatable": false,
+	          "context": "product-thumbnail-medium",
+	          "height": 402
+	      },
+	      {
+	          "url": "http://images.onyo.com/OzH2FAt7UmdRRXDUWDdkX5F9Wmw=/0x0:780x780/fit-in/240x240/https://onyo.s3.amazonaws.com/picture/6f3e54ea323f445ba485e9bedad44fdb.jpg",
+	          "width": 780,
+	          "repeatable": false,
+	          "context": "menu-product",
+	          "height": 780
+	      },
+	      {
+	          "url": "http://images.onyo.com/OzH2FAt7UmdRRXDUWDdkX5F9Wmw=/0x0:780x780/fit-in/240x240/https://onyo.s3.amazonaws.com/picture/6f3e54ea323f445ba485e9bedad44fdb.jpg",
+	          "width": 780,
+	          "repeatable": false,
+	          "context": "product-thumbnail-small",
+	          "height": 780
+	      },
+	      {
+	          "url": "http://images.onyo.com/fnOpHnDIp7BAi3nbVB6aejJqgpA=/6x318:780x689/fit-in/750x360/https://onyo.s3.amazonaws.com/picture/571ad7c36db9410788a00cfa777d8e34.jpg",
+	          "width": 774,
+	          "repeatable": false,
+	          "context": "product-detail-horizontal",
+	          "height": 371
+	      },
+	      {
+	          "url": "http://images.onyo.com/Fsf-pvMRhsLWEYs96k8J4R8FARM=/0x285:780x675/fit-in/960x480/https://onyo.s3.amazonaws.com/picture/e26979e21f564360b3417b761eefaa71.jpg",
+	          "width": 780,
+	          "repeatable": false,
+	          "context": "offer",
+	          "height": 390
+	      }
+	  ],
+	  "rewardable": false,
+	  "currency": "BRL",
+	  "operator": "and",
+	  "shortDescription": "Com acompanhamentos",
+	  "redeemPoints": null,
+	  "category": null,
+	  "layout": "vertical",
+	  "unavailable": false,
+	  "minimumChoices": 0,
+	  "id": "http://api.onyo.com/v1/mobile/product/283",
+	  "recommended": false,
+	  "preparationTimeMaximum": null,
+	  "hidden": false,
+	  "type": "menu-item",
+	  "preparationTimeMinimum": null,
+	  "maximumChoices": 1,
+	  "offer": false,
+	  "price": "36.00",
+	  "rewardPoints": null,
+	  "timeRule": null,
+	  "name": "Salsichão",
+	  "fullDescription": "Escolha uma manteiga ou molho e até 2 acompanhamentos ou 1 acompanhamento especial ou 1 batata recheada.\r\n(*Itens não disponíveis nas lojas Ouvidor e Senador Dantas)",
+	  "products": [
+	      "http://api.onyo.com/v1/mobile/product/284",
+	      "http://api.onyo.com/v1/mobile/product/286",
+	      "http://api.onyo.com/v1/mobile/product/297",
+	      "http://api.onyo.com/v1/mobile/product/315",
+	      "http://api.onyo.com/v1/mobile/product/319"
+	  ],
+	  "redeemable": false,
+	  "isMenuException": false
+	}
   ]
 }

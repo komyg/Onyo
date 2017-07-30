@@ -68,7 +68,7 @@ describe('CompanyService', () => {
       expect(categoryMap.size).toBeGreaterThan(0);
 
       // Auxiliary variable to generate a JSON for the company-map.json file.
-      // const temp = JSON.stringify(Array.from(categoryMap.entries()));
+      const temp = JSON.stringify(Array.from(categoryMap.entries()));
 
       expect(categoryMap.get(26)).toBeTruthy();
       expect(categoryMap.get(26)).toEqual(jasmine.objectContaining({

@@ -30,11 +30,8 @@ export class Node {
     this.name = data.name;
     this.description = data.shortDescription;
     this.setTypeFromStr(data.type);
-
-    // TODO: add image
+    this.setImgFromData(this.type);
   }
-
-  // TODO: remove unused setters.
 
   /**
    * Get the data retrieved from the API.
@@ -47,24 +44,12 @@ export class Node {
     return this.id;
   }
 
-  public setName(name: string) {
-    this.name = name;
-  }
-
   public getName(): string {
     return this.name;
   }
 
-  public setDescription(description: string) {
-    this.description = description;
-  }
-
   public getDescription(): string {
     return this.description;
-  }
-
-  public setImage(image: string) {
-    this.image = image;
   }
 
   public getImage(): string {
@@ -98,7 +83,26 @@ export class Node {
         this.type = NodeType.category;
         break;
     }
+  }
 
+  private setImgFromData(type: NodeType) {
+
+    this.image = '';
+
+    if (type === NodeType.category) {
+      for (const image of this.data.image) {
+        if (image.context === 'category-background') {
+          this.image = image.url;
+        }
+      }
+    }
+    else {
+      for (const image of this.data.image) {
+        if (image.context === 'product-thumbnail-medium') {
+          this.image = image.url;
+        }
+      }
+    }
   }
 
 }

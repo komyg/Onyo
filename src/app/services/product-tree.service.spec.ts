@@ -66,7 +66,8 @@ describe('ProductTreeService', () => {
       expect(node).toEqual(jasmine.objectContaining({
         id: 26,
         name: 'Massas',
-        type: NodeType.category
+        type: NodeType.category,
+        image: 'http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png' // tslint:disable-line: max-line-length
       }));
 
       // Check the menu-item.
@@ -77,7 +78,8 @@ describe('ProductTreeService', () => {
       expect(node).toEqual(jasmine.objectContaining({
         id: 441,
         name: 'Tomate e Manjericão',
-        type: NodeType.menuItem
+        type: NodeType.menuItem,
+        image: 'http://images.onyo.com/k9SIIENm82tYiIN4tKJZcXGKacU=/0x227:683x810/fit-in/471x402/https://onyo.s3.amazonaws.com/picture/d40b71cf-0ffa-46b1-ba56-d2257337edcb.jpg' // tslint:disable-line: max-line-length
       }));
 
       // Check the choosable inside the menu-item
@@ -88,7 +90,8 @@ describe('ProductTreeService', () => {
       expect(node).toEqual(jasmine.objectContaining({
         id: 442,
         name: 'Opções',
-        type: NodeType.choosable
+        type: NodeType.choosable,
+        image: 'http://images.onyo.com/k9SIIENm82tYiIN4tKJZcXGKacU=/0x227:683x810/fit-in/471x402/https://onyo.s3.amazonaws.com/picture/d40b71cf-0ffa-46b1-ba56-d2257337edcb.jpg' // tslint:disable-line: max-line-length
       }));
 
       // Check the simple items insde the choosable
@@ -99,7 +102,8 @@ describe('ProductTreeService', () => {
       expect(child).toEqual(jasmine.objectContaining({
         id: 443,
         name: 'Fettuccine',
-        type: NodeType.simple
+        type: NodeType.simple,
+        image: 'http://images.onyo.com/k9SIIENm82tYiIN4tKJZcXGKacU=/0x227:683x810/fit-in/471x402/https://onyo.s3.amazonaws.com/picture/d40b71cf-0ffa-46b1-ba56-d2257337edcb.jpg' // tslint:disable-line: max-line-length
       }));
 
       child = node.children.get(444);
@@ -107,7 +111,8 @@ describe('ProductTreeService', () => {
       expect(child).toEqual(jasmine.objectContaining({
         id: 444,
         name: 'Penne',
-        type: NodeType.simple
+        type: NodeType.simple,
+        image: 'http://images.onyo.com/k9SIIENm82tYiIN4tKJZcXGKacU=/0x227:683x810/fit-in/471x402/https://onyo.s3.amazonaws.com/picture/d40b71cf-0ffa-46b1-ba56-d2257337edcb.jpg' // tslint:disable-line: max-line-length
       }));
 
     });
@@ -130,7 +135,8 @@ describe('ProductTreeService', () => {
       expect(node).toEqual(jasmine.objectContaining({
         id: 28,
         name: 'Sucos e Bebidas',
-        type: NodeType.category
+        type: NodeType.category,
+        image: 'http://images.onyo.com/57DlOPR6LofdyACAcEsV2JkZ0U0=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/3295c2065362401a918301d252bcafa4.png' // tslint:disable-line: max-line-length
       }));
 
       // Check the menu-item.
@@ -141,7 +147,8 @@ describe('ProductTreeService', () => {
       expect(node).toEqual(jasmine.objectContaining({
         id: 456,
         name: 'Suco Verde',
-        type: NodeType.menuItem
+        type: NodeType.menuItem,
+        image: ''
       }));
 
     });

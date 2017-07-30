@@ -1,0 +1,32 @@
+[[26,
+{
+	"numericalId": 26,
+	"name": "Massas",
+	"parent": null,
+	"brand": "http://api.staging.onyo.com/v1/mobile/brand/1",
+	"id": "http://api.staging.onyo.com/v1/mobile/category/26",
+	"image": [{
+		"url": "http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png",
+		"width": 450,
+		"repeatable": false,
+		"context": "category-background",
+		"height": 480
+	}],
+	"order": 10
+}],
+[28,
+{
+	"numericalId": 28,
+	"name": "Sucos e Bebidas",
+	"parent": null,
+	"brand": "http://api.staging.onyo.com/v1/mobile/brand/1",
+	"id": "http://api.staging.onyo.com/v1/mobile/category/28",
+	"image": [{
+		"url": "http://images.onyo.com/57DlOPR6LofdyACAcEsV2JkZ0U0=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/3295c2065362401a918301d252bcafa4.png",
+		"width": 450,
+		"repeatable": false,
+		"context": "category-background",
+		"height": 480
+	}],
+	"order": 13
+}]]

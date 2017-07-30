@@ -63,6 +63,9 @@ describe('ProductService', () => {
       expect(productMap).toBeDefined();
       expect(productMap.size).toBeGreaterThan(0);
 
+      // Auxiliary variable to generate a JSON for the product-map.json file.
+      // const temp = JSON.stringify(Array.from(productMap.entries()));
+
       expect(productMap.get(441)).toBeTruthy();
       expect(productMap.get(441)).toEqual(jasmine.objectContaining({
         numericalId: 441,

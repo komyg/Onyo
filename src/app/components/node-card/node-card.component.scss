@@ -1,0 +1,18 @@
+
+.node-card {
+
+  width: 200px;
+  height: 70px;
+  margin: 10px;
+  padding: 5px;
+
+  .node-card-img {
+    max-height: 50px;
+    height: auto;
+    width: auto\9; //ie8
+  }
+
+  .node-text {
+    margin: 0 auto;
+  }
+}

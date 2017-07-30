@@ -1,0 +1,7 @@
+<div class="container categories-home">
+  <div *ngIf="categories">
+    <div *ngFor="let category of categories">
+      <app-node-card [node]="category"></app-node-card>
+    </div>
+  </div>
+</div>

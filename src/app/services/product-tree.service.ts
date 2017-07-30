@@ -21,6 +21,9 @@ export class ProductTreeService {
 
   }
 
+  /**
+   * Create the product and category tree.
+   */
   public createTree(companyId: number): Observable<Map<number, Node>> {
     const productData = this.productService.getProductDataByCompanyId(companyId).map(this.createProductTree.bind(this));
     const categoryData = this.companyService.getCategoriesById(companyId).map(this.createCategoryTree.bind(this));
@@ -31,7 +34,6 @@ export class ProductTreeService {
   /**
    * Add the products to their respective categories.
    */
-  // private addProductsToCategories(categories: Map<number, Node>, products: Map<number, Node>): Map<number, Node> {
   private addProductsToCategories(res: Array<any>): Map<number, Node> {
 
     const categories: Map<number, Node> = res[0];

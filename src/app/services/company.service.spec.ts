@@ -69,6 +69,7 @@ describe('CompanyService', () => {
 
       // Auxiliary variable to generate a JSON for the company-map.json file.
       const temp = JSON.stringify(Array.from(categoryMap.entries()));
+      console.debug('Category Map\n' + temp); // tslint:disable-line no-console
 
       expect(categoryMap.get(26)).toBeTruthy();
       expect(categoryMap.get(26)).toEqual(jasmine.objectContaining({

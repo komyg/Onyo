@@ -60,6 +60,10 @@ describe('ProductTreeService', () => {
       expect(tree).toBeTruthy();
       expect(tree.size).toBeGreaterThan(0);
 
+      // Auxiliary variable to generate a JSON for the product-map.json file.
+      let temp = JSON.stringify(Array.from(tree.entries()));
+      console.debug('Tree Map - Category\n' + temp); // tslint:disable-line no-console
+
       // Check the category
       node = tree.get(26);
       expect(node).toBeTruthy();
@@ -69,6 +73,9 @@ describe('ProductTreeService', () => {
         type: NodeType.category,
         image: 'http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png' // tslint:disable-line: max-line-length
       }));
+
+      temp = JSON.stringify(Array.from(node.children.entries()));
+      console.debug('Tree Map - Menu Items - 26\n' + temp); // tslint:disable-line no-console
 
       // Check the menu-item.
       expect(node.children.size).toBeGreaterThan(0);
@@ -82,6 +89,9 @@ describe('ProductTreeService', () => {
         image: 'http://images.onyo.com/ZzJDmwNdoyKjuak_ablOtLTv53Q=/0x113:683x797/fit-in/240x240/https://onyo.s3.amazonaws.com/picture/498e77eb-78d7-46d6-a434-dd23bf081134.jpg' // tslint:disable-line: max-line-length
       }));
 
+      temp = JSON.stringify(Array.from(node.children.entries()));
+      console.debug('Tree Map - Choosable - 26\n' + temp); // tslint:disable-line no-console
+
       // Check the choosable inside the menu-item
       expect(node.children.size).toBeGreaterThan(0);
 
@@ -93,6 +103,9 @@ describe('ProductTreeService', () => {
         type: NodeType.choosable,
         image: 'http://images.onyo.com/ZzJDmwNdoyKjuak_ablOtLTv53Q=/0x113:683x797/fit-in/240x240/https://onyo.s3.amazonaws.com/picture/498e77eb-78d7-46d6-a434-dd23bf081134.jpg' // tslint:disable-line: max-line-length
       }));
+
+      temp = JSON.stringify(Array.from(node.children.entries()));
+      console.debug('Tree Map - Simple - 26\n' + temp); // tslint:disable-line no-console
 
       // Check the simple items insde the choosable
       expect(node.children.size).toBeGreaterThan(0);
@@ -129,6 +142,10 @@ describe('ProductTreeService', () => {
       expect(tree).toBeTruthy();
       expect(tree.size).toBeGreaterThan(0);
 
+      // Auxiliary variable to generate a JSON for the product-map.json file.
+      let temp = JSON.stringify(Array.from(tree.entries()));
+      console.debug('Tree Map - Category\n' + temp); // tslint:disable-line no-console
+
       // Check the categories in the tree.
       node = tree.get(28);
       expect(node).toBeTruthy();
@@ -138,6 +155,9 @@ describe('ProductTreeService', () => {
         type: NodeType.category,
         image: 'http://images.onyo.com/57DlOPR6LofdyACAcEsV2JkZ0U0=/0x0:450x480/fit-in/450x480/https://onyo.s3.amazonaws.com/picture/3295c2065362401a918301d252bcafa4.png' // tslint:disable-line: max-line-length
       }));
+
+      temp = JSON.stringify(Array.from(node.children.entries()));
+      console.debug('Tree Map - Menu Items - 28\n' + temp); // tslint:disable-line no-console
 
       // Check the menu-item.
       expect(node.children.size).toBeGreaterThan(0);

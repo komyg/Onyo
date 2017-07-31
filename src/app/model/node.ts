@@ -6,6 +6,7 @@ import { NodeType } from './node-type.enum';
 export class Node {
   parent: Node;
   children: Map<number, Node>;
+  hide: boolean;
 
   private id: number;
   private name: string;
@@ -16,9 +17,12 @@ export class Node {
   // Contains all the JSON data that was retrieved from the API.
   private data: any;
 
-  constructor(data: any) {
-    this.setData(data);
+  constructor(data?: any) {
+    if (data) {
+      this.setData(data);
+    }
     this.children = new Map<number, Node>();
+    this.hide = false; // Default value
   }
 
   /**
@@ -58,6 +62,10 @@ export class Node {
 
   public setType(type: NodeType) {
     this.type = type;
+  }
+
+  public getType(): NodeType {
+    return this.type;
   }
 
   public setTypeFromStr(type: string) {

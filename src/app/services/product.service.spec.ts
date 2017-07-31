@@ -65,6 +65,7 @@ describe('ProductService', () => {
 
       // Auxiliary variable to generate a JSON for the product-map.json file.
       const temp = JSON.stringify(Array.from(productMap.entries()));
+      console.debug('Product Map\n' + temp); // tslint:disable-line no-console
 
       expect(productMap.get(441)).toBeTruthy();
       expect(productMap.get(441)).toEqual(jasmine.objectContaining({

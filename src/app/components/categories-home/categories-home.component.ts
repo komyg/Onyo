@@ -12,7 +12,8 @@ import { ProductTreeService } from '../../services/product-tree.service';
 })
 export class CategoriesHomeComponent implements OnInit {
 
-  private categories: Node[];
+  categories: Node[];
+  categoryMap: Map<number, Node>;
 
   constructor(private productTreeService: ProductTreeService, private cdr: ChangeDetectorRef) {
 
@@ -21,6 +22,7 @@ export class CategoriesHomeComponent implements OnInit {
   ngOnInit() {
     // Retrieve data from the backend.
     this.productTreeService.createTree(1).subscribe((res: Map<number, Node>) => {
+      this.categoryMap = res;
       this.categories = Array.from(res.values());
     });
   }

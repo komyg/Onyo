@@ -98,7 +98,7 @@ export class Node {
     }
     else {
       for (const image of this.data.image) {
-        if (image.context === 'product-thumbnail-medium') {
+        if (image.context === 'product-thumbnail-small') {
           this.image = image.url;
         }
       }

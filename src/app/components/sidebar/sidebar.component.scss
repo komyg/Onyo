@@ -1,0 +1,62 @@
+@import '../../sass/global';
+
+.sidebar {
+  width: $sidebar-width;
+  top: $top-height;
+  left: 0;
+  z-index: 1001;
+  display: block;
+  min-height: 100%;
+  background-color: $sidebar;
+  height: 100%;
+  position: fixed;
+
+  .sidebar-list {
+    margin: 0;
+    overflow: hidden;
+    padding: 18px 0 0 0;
+    list-style: none;
+  }
+
+
+  .sidebar-list-link {
+    display: block;
+    height: 42px;
+    padding-left: 18px;
+    text-shadow: none;
+    font-size: 13px;
+    text-decoration: none;
+    color: $sidebar-text;
+    line-height: 42px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+      b {
+        color: $primary;
+      }
+    }
+    i {
+      margin-right: 18px;
+      width: 16px;
+      display: inline-block;
+    }
+    b {
+      display: block;
+      opacity: 1;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      text-shadow: none;
+      font-size: 18px;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      padding: 0;
+      text-align: center;
+      color: $sidebar-text;
+      transition: transform 0.2s linear;
+    }
+  }
+}

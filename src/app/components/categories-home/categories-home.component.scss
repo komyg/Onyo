@@ -1,4 +1,7 @@
+@import '../../sass/global';
 
 .categories-home {
+  padding-top: $top-height + 40px;
+  padding-left: $sidebar-width;
   margin: 0 auto;
 }

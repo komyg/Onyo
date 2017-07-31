@@ -11,6 +11,8 @@ import { NodeCardComponent } from './components/node-card/node-card.component';
 import { CategoriesHomeComponent } from './components/categories-home/categories-home.component';
 import { TreeComponent } from './components/tree/tree.component';
 import { TreeNodePlacementPipe } from './pipes/tree-node-placement.pipe';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { PageTopComponent } from './components/page-top/page-top.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TreeNodePlacementPipe } from './pipes/tree-node-placement.pipe';
     NodeCardComponent,
     CategoriesHomeComponent,
     TreeComponent,
-    TreeNodePlacementPipe
+    TreeNodePlacementPipe,
+    SidebarComponent,
+    PageTopComponent
   ],
   imports: [
     BrowserModule,

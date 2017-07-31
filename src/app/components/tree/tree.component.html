@@ -1,38 +1,38 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-3">
+    <div class="col-3 text-center">
       <h4>Categorias</h4>
     </div>
-    <div class="col-3">
+    <div class="col-3 text-center">
       <h4>Itens</h4>
     </div>
-    <div class="col-3">
+    <div class="col-3 text-center">
       <h4>Opções</h4>
     </div>
-    <div class="col-3">
+    <div class="col-3 text-center">
       <h4>Componentes</h4>
     </div>
   </div>
 
   <div class="row" *ngFor="let category of [productTree] | treeNodePlacement;">
-    <div class="col-3">
+    <div class="col-3 mx-auto">
       <app-node-card [node]="category.categoryItem"></app-node-card>
     </div>
 
-    <div class="col-3">
+    <div class="col-3 mx-auto">
       <div *ngFor="let menuItem of category.menuItems">
         <app-node-card [node]="menuItem" [ngClass]="{'invisible' : menuItem.hide}"></app-node-card>
       </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-3 mx-auto">
       <div *ngFor="let choosable of category.choosableItems">
         <app-node-card [node]="choosable" [ngClass]="{'invisible' : choosable.hide}" ></app-node-card>
       </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-3 mx-auto">
       <div *ngFor="let simple of category.simpleItems">
         <app-node-card [node]="simple" [ngClass]="{'invisible' : simple.hide}"></app-node-card>
       </div>

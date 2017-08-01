@@ -6,11 +6,12 @@
     display: flex;
 
     .title-text {
+      @include shadow-text;
+
       margin: auto 0;
       padding-left: 15px;
       color: $content-text;
       font-size: $card-header-font-size;
-      opacity: 0.9;
     }
 
     .img {
@@ -22,6 +23,7 @@
   }
 
   .children-panel-title {
+    @include shadow-text;
     padding-bottom: 10px;
   }
 
@@ -36,6 +38,11 @@
 
     ::ng-deep .card-header, .card-footer {
       color: $content-text;
+
+      a {
+        text-decoration: none;
+      }
+
       //border-bottom: $bootstrap-panel-header-border;
       // height: $card-title-height;
       // font-size: $card-header-font-size;

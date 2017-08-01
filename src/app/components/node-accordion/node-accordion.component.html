@@ -13,7 +13,7 @@
     <ng-template ngbPanelContent class="content">
 
       <div class="container">
-        <h5 class="children-panel-title">{{ childrenPanelTitle }}</h5>
+        <h4 class="children-panel-title">{{ childrenPanelTitle }}</h4>
 
         <div *ngFor="let child of node.children.values()">
           <app-node-accordion [node]="child"></app-node-accordion>

@@ -1,7 +1,16 @@
 @import '../../sass/global';
 
 .categories-home {
-  padding-top: $top-height + 40px;
-  padding-left: $sidebar-width;
-  margin: 0 auto;
+  margin-left: $sidebar-width;
+  padding: $top-height 0 0 0;
+  min-height: 500px;
+  position: relative;
+}
+
+.content {
+  padding: 8px 32px 8px 40px;
+
+  .title {
+    padding: 30px 0;
+  }
 }

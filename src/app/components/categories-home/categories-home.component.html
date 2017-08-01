@@ -1,7 +1,6 @@
-<div class="container categories-home">
-  <div *ngIf="categoryMap">
-
+<div class="categories-home">
+  <div class="content" *ngIf="categoryMap">
+    <h2 class="title">Cardápio</h2>
     <app-tree [productTree]="categoryMap"></app-tree>
-
   </div>
 </div>

@@ -1,0 +1,11 @@
+<div class="product-edit">
+  <div class="content">
+    <h2 class="title">Cardápio</h2>
+
+    <div *ngIf="categoryMap">
+      <div *ngFor="let category of categoryMap.values()">
+        <app-node-accordion [node]="category"></app-node-accordion>
+      </div>
+    </div>
+  </div>
+</div>

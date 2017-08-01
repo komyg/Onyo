@@ -1,0 +1,16 @@
+@import '../../sass/global';
+
+.product-edit {
+  margin-left: $sidebar-width;
+  padding: $top-height 0 0 0;
+  min-height: 500px;
+  position: relative;
+}
+
+.content {
+  padding: 8px 32px 8px 40px;
+
+  .title {
+    padding: 30px 0;
+  }
+}

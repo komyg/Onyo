@@ -17,12 +17,12 @@
 
   <div class="row" *ngFor="let category of [productTree] | treeNodePlacement;">
     <div class="col-3 mx-auto">
-      <app-node-card [node]="category.categoryItem"></app-node-card>
+      <app-node-card #categories [node]="category.categoryItem"></app-node-card>
     </div>
 
     <div class="col-3 mx-auto">
       <div *ngFor="let menuItem of category.menuItems">
-        <app-node-card [node]="menuItem" [ngClass]="{'invisible' : menuItem.hide}"></app-node-card>
+        <app-node-card #menuItems [node]="menuItem" [ngClass]="{'invisible' : menuItem.hide}"></app-node-card>
       </div>
     </div>
 

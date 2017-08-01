@@ -1,0 +1,26 @@
+<ngb-accordion class="node-accodion">
+  <ngb-panel [disabled]="disabled">
+
+    <!-- Title -->
+    <ng-template ngbPanelTitle>
+      <div class="title">
+        <img class="img" [src]="node.getImage()" />
+        <h6 class="title-text">{{ node.getName() }}</h6>
+      </div>
+    </ng-template>
+
+    <!-- Child nodes -->
+    <ng-template ngbPanelContent class="content">
+
+      <div class="container">
+        <h5 class="children-panel-title">{{ childrenPanelTitle }}</h5>
+
+        <div *ngFor="let child of node.children.values()">
+          <app-node-accordion [node]="child"></app-node-accordion>
+        </div>
+
+      </div>
+
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

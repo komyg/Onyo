@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CompanyService } from './services/company.service';
 import { ProductService } from './services/product.service';
@@ -13,6 +14,8 @@ import { TreeComponent } from './components/tree/tree.component';
 import { TreeNodePlacementPipe } from './pipes/tree-node-placement.pipe';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageTopComponent } from './components/page-top/page-top.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { NodeAccordionComponent } from './components/node-accordion/node-accordion.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { PageTopComponent } from './components/page-top/page-top.component';
     TreeComponent,
     TreeNodePlacementPipe,
     SidebarComponent,
-    PageTopComponent
+    PageTopComponent,
+    ProductEditComponent,
+    NodeAccordionComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot()
   ],
   providers: [
     CompanyService,

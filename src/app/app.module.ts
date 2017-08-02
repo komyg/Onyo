@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import { CompanyService } from './services/company.service';
 import { ProductService } from './services/product.service';
@@ -16,6 +18,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PageTopComponent } from './components/page-top/page-top.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 import { NodeAccordionComponent } from './components/node-accordion/node-accordion.component';
+
+import { productTreeReducer } from './reducers/product-tree.reducer';
+import { ProductTreeEffect } from './effects/product-tree.effect';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { NodeAccordionComponent } from './components/node-accordion/node-accordi
   imports: [
     BrowserModule,
     HttpModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    StoreModule.forRoot({ productTree: productTreeReducer }),
+    EffectsModule.forRoot([ProductTreeEffect])
   ],
   providers: [
     CompanyService,

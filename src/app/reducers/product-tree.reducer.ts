@@ -21,16 +21,16 @@ const initialState: State = {
 export function productTreeReducer(state = initialState, action: productTreeOperations.Actions): State {
 
   switch (action.type) {
-    case productTreeOperations.ActionTypes.LOAD_PRODUCT_TREE:
+    case productTreeOperations.LOAD_PRODUCT_TREE:
       return initialState; // Reset state
 
-    case productTreeOperations.ActionTypes.LOAD_PRODUCT_TREE_COMPLETE:
-      return { productTree: <Map<number, Node>>action.payload, errorMsg: '' };
+    case productTreeOperations.LOAD_PRODUCT_TREE_COMPLETE:
+      return { productTree: action.payload, errorMsg: '' };
 
-    case productTreeOperations.ActionTypes.LOAD_PRODUCT_TREE_FAIL:
-      return { productTree: undefined, errorMsg: <string>action.payload }
+    case productTreeOperations.LOAD_PRODUCT_TREE_FAIL:
+      return { productTree: undefined, errorMsg: action.payload }
 
-    case productTreeOperations.ActionTypes.DELETE_BRANCH:
+    case productTreeOperations.DELETE_BRANCH:
       const node = <Node>action.payload;
       const newState = Object.assign({}, state);
 
@@ -43,7 +43,7 @@ export function productTreeReducer(state = initialState, action: productTreeOper
         const path: Array<number> = ProductTreeReducerHelper.getPathToParent(node);
 
         // Drill down on the new structure until we reach the parent of the node to delete.
-        let deleteNodeParent: Node = state.productTree.get(path.pop());
+        let deleteNodeParent: Node = newState.productTree.get(path.pop());
         while (path.length > 0) {
           deleteNodeParent = deleteNodeParent.children.get(path.pop());
         }
@@ -52,7 +52,7 @@ export function productTreeReducer(state = initialState, action: productTreeOper
         deleteNodeParent.children.delete(node.id);
       }
 
-      return state;
+      return newState;
 
     default:
       return state;

@@ -19,7 +19,7 @@ import * as productTreeActions from '../actions/product-tree.action';
 @Injectable()
 export class ProductTreeEffect {
 
-  @Effect() loadProductTree$: Observable<Action> = this.actions.ofType(productTreeActions.ActionTypes.LOAD_PRODUCT_TREE)
+  @Effect() loadProductTree$: Observable<Action> = this.actions.ofType(productTreeActions.LOAD_PRODUCT_TREE)
     .mergeMap((action: LoadProductTreeAction) => this.productTreeService.createTree(action.payload)
       .map((productTree: Map<number, Node>) => new LoadProductTreeCompleteAction(productTree))
       .catch(error => Observable.throw(new LoadProductTreeFailAction(error))));

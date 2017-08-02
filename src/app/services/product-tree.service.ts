@@ -22,7 +22,7 @@ export class ProductTreeService {
   }
 
   /**
-   * Create the product and category tree.
+   * Create the product and category trees.
    */
   public createTree(companyId: number): Observable<Map<number, Node>> {
     const productData = this.productService.getProductDataByCompanyId(companyId).map(this.createProductTree.bind(this));

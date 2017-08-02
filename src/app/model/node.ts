@@ -8,14 +8,14 @@ export class Node {
   children: Map<number, Node>;
   hide: boolean;
 
-  private id: number;
-  private name: string;
-  private description: string;
-  private image: string;
-  private type: NodeType;
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  type: NodeType;
 
   // Contains all the JSON data that was retrieved from the API.
-  private data: any;
+  data: any;
 
   constructor(data?: any) {
     if (data) {

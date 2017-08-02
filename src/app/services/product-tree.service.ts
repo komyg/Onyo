@@ -48,6 +48,7 @@ export class ProductTreeService {
 
         category.children.set(product.getId(), product);
         product.parent = category;
+        product.parentId = category.id;
       }
       else {
         console.warn('Product with null category: ' + productKey);
@@ -110,6 +111,7 @@ export class ProductTreeService {
         const child = new Node(productData.get(childId));
         root.children.set(childId, child);
         child.parent = root;
+        child.parentId = root.id;
 
         this.addChildNodesToNode(child, productData);
       }

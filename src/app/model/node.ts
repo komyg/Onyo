@@ -9,6 +9,7 @@ export class Node {
   hide: boolean;
 
   id: number;
+  parentId: number;
   name: string;
   description: string;
   image: string;

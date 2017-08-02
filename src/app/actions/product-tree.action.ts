@@ -5,7 +5,9 @@ import { Node } from '../model/node';
 export const LOAD_PRODUCT_TREE = 'load-product-tree';
 export const LOAD_PRODUCT_TREE_COMPLETE = 'load-product-tree-complete';
 export const LOAD_PRODUCT_TREE_FAIL = 'load-product-tree-fail';
+
 export const DELETE_BRANCH = 'delete-branch';
+export const ADD_CHILD = 'add-child';
 
 /**
  * Loads tree from backend and resets current state.
@@ -39,7 +41,16 @@ export class DeleteBranchAction implements Action {
   constructor (public payload: Node) { }
 }
 
+/**
+ * Adds a child to a node.
+ */
+export class AddChildAction implements Action {
+  readonly type = ADD_CHILD;
+  constructor (public payload: { parent: Node, child: Node }) { }
+}
+
 export type Actions = LoadProductTreeAction |
                       LoadProductTreeCompleteAction |
                       LoadProductTreeFailAction |
-                      DeleteBranchAction;
+                      DeleteBranchAction |
+                      AddChildAction;

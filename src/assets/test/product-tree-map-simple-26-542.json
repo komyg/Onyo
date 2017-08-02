@@ -1,0 +1,229 @@
+[
+  [249, {
+    "data": {
+      "numericalId": 249,
+      "sequence": 1,
+      "image": [{
+        "url": "http://images.onyo.com/UVNAdgfrHR9NJhhEGsQ09muELvE=/0x0:689x689/fit-in/240x…s://onyo.s3.amazonaws.com/picture/22daf6c3-33e7-4ca2-b83a-255fd10d8416.jpg",
+        "width": 689,
+        "repeatable": false,
+        "context": "product-thumbnail-small",
+        "height": 689
+      }, {
+        "url": "http://images.onyo.com/m0qLtgiGU3Fo0uYpQCZi5Kk-DWQ=/6x0:689x684/fit-in/780x…s://onyo.s3.amazonaws.com/picture/22daf6c3-33e7-4ca2-b83a-255fd10d8416.jpg",
+        "width": 683,
+        "repeatable": false,
+        "context": "product-detail",
+        "height": 684
+      }, {
+        "url": "http://images.onyo.com/UVNAdgfrHR9NJhhEGsQ09muELvE=/0x0:689x689/fit-in/240x…s://onyo.s3.amazonaws.com/picture/22daf6c3-33e7-4ca2-b83a-255fd10d8416.jpg",
+        "width": 689,
+        "repeatable": false,
+        "context": "menu-product",
+        "height": 689
+      }],
+      "rewardable": false,
+      "currency": "BRL",
+      "operator": null,
+      "shortDescription": "193020 PASTEL 4 MISTO",
+      "redeemPoints": null,
+      "category": null,
+      "layout": "vertical",
+      "minimumChoices": 0,
+      "id": "http://api.onyo.com/v1/mobile/product/249",
+      "recommended": false,
+      "preparationTimeMaximum": null,
+      "hidden": true,
+      "type": "simple",
+      "preparationTimeMinimum": null,
+      "maximumChoices": 1,
+      "offer": false,
+      "price": null,
+      "rewardPoints": null,
+      "timeRule": null,
+      "name": "Misto",
+      "fullDescription": "193020 PASTEL 4 MISTO",
+      "products": [],
+      "redeemable": false
+    },
+    "id": 249,
+    "name": "Misto",
+    "description": "193020 PASTEL 4 MISTO",
+    "type": "simple",
+    "image": "http://images.onyo.com/UVNAdgfrHR9NJhhEGsQ09muELvE=/0x0:689x689/fit-in/240x…s://onyo.s3.amazonaws.com/picture/22daf6c3-33e7-4ca2-b83a-255fd10d8416.jpg",
+    "children": {},
+    "hide": false,
+    "parent": {
+      "data": {
+        "numericalId": 409,
+        "sequence": 1,
+        "image": [{
+          "url": "http://images.onyo.com/mVxyRUaGGXNqMDZNeDdCN_5UtjA=/0x0:689x588/fit-in/471x…s://onyo.s3.amazonaws.com/picture/adb2038a-4920-4de0-b9ac-9f8e74e97b17.jpg",
+          "width": 689,
+          "repeatable": false,
+          "context": "product-thumbnail-medium",
+          "height": 588
+        }, {
+          "url": "http://images.onyo.com/S4idi4SJ11IWmnNHf89e4TtEmDw=/0x152:689x497/fit-in/96…s://onyo.s3.amazonaws.com/picture/34df7ea6-00aa-41d6-a3bc-48be95d9b48e.jpg",
+          "width": 689,
+          "repeatable": false,
+          "context": "offer",
+          "height": 345
+        }, {
+          "url": "http://images.onyo.com/2C6xIKuzPaHS7i0htEdwYiRLCCk=/0x66:689x755/fit-in/780…s://onyo.s3.amazonaws.com/picture/cb6e3407-3aac-4efa-802a-4d2401e3d4a8.jpg",
+          "width": 689,
+          "repeatable": false,
+          "context": "product-detail",
+          "height": 689
+        }, {
+          "url": "http://images.onyo.com/XcXv-c-R1Sh69E_AwYPt3BB3NNE=/3x0:689x686/fit-in/240x…s://onyo.s3.amazonaws.com/picture/cb6e3407-3aac-4efa-802a-4d2401e3d4a8.jpg",
+          "width": 686,
+          "repeatable": false,
+          "context": "product-thumbnail-small",
+          "height": 686
+        }, {
+          "url": "http://images.onyo.com/W6L8bSf4iEEZcpCDq3bgjeiihOg=/0x0:689x689/fit-in/240x…s://onyo.s3.amazonaws.com/picture/8e78956f-7af9-42d7-b7eb-2539cc3c7434.jpg",
+          "width": 689,
+          "repeatable": false,
+          "context": "menu-product",
+          "height": 689
+        }],
+        "rewardable": false,
+        "currency": null,
+        "operator": null,
+        "shortDescription": "",
+        "redeemPoints": null,
+        "category": null,
+        "layout": "vertical",
+        "minimumChoices": 1,
+        "id": "http://api.onyo.com/v1/mobile/product/409",
+        "recommended": false,
+        "preparationTimeMaximum": null,
+        "hidden": false,
+        "type": "choosable",
+        "preparationTimeMinimum": null,
+        "maximumChoices": 1,
+        "offer": false,
+        "price": null,
+        "rewardPoints": null,
+        "timeRule": null,
+        "name": "Opções",
+        "fullDescription": "",
+        "products": ["http://api.onyo.com/v1/mobile/product/248", "http://api.onyo.com/v1/mobile/product/249", "http://api.onyo.com/v1/mobile/product/246", "http://api.onyo.com/v1/mobile/product/247"],
+        "redeemable": false
+      },
+      "id": 409,
+      "name": "Opções",
+      "description": "",
+      "type": "choosable",
+      "image": "http://images.onyo.com/XcXv-c-R1Sh69E_AwYPt3BB3NNE=/3x0:689x686/fit-in/240x…s://onyo.s3.amazonaws.com/picture/cb6e3407-3aac-4efa-802a-4d2401e3d4a8.jpg",
+      "children": {},
+      "hide": false,
+      "parent": {
+        "data": {
+          "numericalId": 542,
+          "sequence": 2,
+          "image": [{
+            "url": "http://images.onyo.com/qcr5M7Cr0AvvRu6wOvNflxIGqKM=/0x0:780x780/fit-in/240x…https://onyo.s3.amazonaws.com/picture/ddf3db8500644eb88096f179f5c76735.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "menu-product",
+            "height": 780
+          }, {
+            "url": "http://images.onyo.com/m8dww0zX0wI9LAldDMpUxDwbCR4=/0x116:780x664/fit-in/33…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "aggregator-product-list",
+            "height": 548
+          }, {
+            "url": "http://images.onyo.com/x853aJhJLGhQ2ejF4YtZZwJd2ZE=/0x181:780x555/fit-in/75…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "product-detail-horizontal",
+            "height": 374
+          }, {
+            "url": "http://images.onyo.com/qry_mwJVRP6PTFizPZ2efgeiWXI=/0x198:780x557/fit-in/10…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "offer",
+            "height": 359
+          }, {
+            "url": "http://images.onyo.com/uvTbNsrUJRmtMnC4gi2I2Z3xzZs=/0x0:780x780/fit-in/240x…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "product-thumbnail-small",
+            "height": 780
+          }, {
+            "url": "http://images.onyo.com/NiBEEP1qNs0vNtEDeFjv_A-glF0=/0x105:780x771/fit-in/47…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "product-thumbnail-medium",
+            "height": 666
+          }, {
+            "url": "http://images.onyo.com/GAumHtpb5bjjMDDAkvuXGMkyJe0=/0x0:780x780/fit-in/780x…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+            "width": 780,
+            "repeatable": false,
+            "context": "product-detail",
+            "height": 780
+          }],
+          "rewardable": false,
+          "currency": "BRL",
+          "operator": "and",
+          "shortDescription": "(4 unidades) napolitano especial, brie e camarão",
+          "redeemPoints": 46,
+          "category": "http://api.onyo.com/v1/mobile/category/26",
+          "layout": "vertical",
+          "minimumChoices": 0,
+          "id": "http://api.onyo.com/v1/mobile/product/542",
+          "recommended": false,
+          "preparationTimeMaximum": null,
+          "hidden": false,
+          "type": "menu-item",
+          "preparationTimeMinimum": null,
+          "maximumChoices": 1,
+          "offer": false,
+          "price": "20.00",
+          "rewardPoints": null,
+          "timeRule": null,
+          "name": "Pastéis (1/2 Porção)",
+          "fullDescription": "4 unidades\r\n*Item não disponível nas lojas Ouvidor e Senador Dantas",
+          "products": ["http://api.onyo.com/v1/mobile/product/409"],
+          "redeemable": true
+        },
+        "id": 542,
+        "name": "Pastéis (1/2 Porção)",
+        "description": "(4 unidades) napolitano especial, brie e camarão",
+        "type": "menu-item",
+        "image": "http://images.onyo.com/uvTbNsrUJRmtMnC4gi2I2Z3xzZs=/0x0:780x780/fit-in/240x…https://onyo.s3.amazonaws.com/picture/0cb5d2d0aa9c46c6ad79959d75f4ca35.jpg",
+        "children": {},
+        "hide": false,
+        "parent": {
+          "data": {
+            "numericalId": 26,
+            "name": "Massas",
+            "parent": null,
+            "brand": "http://api.staging.onyo.com/v1/mobile/brand/1",
+            "id": "http://api.staging.onyo.com/v1/mobile/category/26",
+            "image": [{
+              "url": "http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x…https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png",
+              "width": 450,
+              "repeatable": false,
+              "context": "category-background",
+              "height": 480
+            }],
+            "order": 10
+          },
+          "id": 26,
+          "name": "Massas",
+          "type": "category",
+          "image": "http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x…https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png",
+          "children": {},
+          "hide": false
+        },
+        "parentId": 26
+      },
+      "parentId": 542
+    },
+    "parentId": 409
+  }]
+]

@@ -49,7 +49,7 @@
       "timeRule": null,
       "name": "Opções",
       "fullDescription": "",
-      "products": ["http://api.onyo.com/v1/mobile/product/444", "http://api.onyo.com/v1/mobile/product/443"],
+      "products": ["http://api.onyo.com/v1/mobile/product/444", "http://api.onyo.com/v1/mobile/product/443", "http://api.onyo.com/v1/mobile/product/249"],
       "redeemable": false
     },
     "id": 442,
@@ -153,7 +153,9 @@
         "image": "http://images.onyo.com/Ao5NsKjBsg6cQjIJAUYKPmZYbOo=/0x0:450x480/fit-in/450x…https://onyo.s3.amazonaws.com/picture/d106c0ee7549416ab4394a21970c34a9.png",
         "children": {},
         "hide": false
-      }
-    }
+      },
+      "parentId": 26
+    },
+    "parentId": 441
   }]
 ]

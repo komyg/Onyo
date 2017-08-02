@@ -13,9 +13,10 @@ export class ProductTreeReducerHelper {
       path.push(node.id);
     }
     else {
-      const parent = node.parent;
-      while (parent) {
-        path.push(parent.id);
+      let currentNode = node;
+      while (currentNode.parent) {
+        path.push(currentNode.parent.id);
+        currentNode = currentNode.parent;
       }
     }
 

@@ -43,9 +43,9 @@ export function productTreeReducer(state = initialState, action: productTreeOper
         const path: Array<number> = ProductTreeReducerHelper.getPathToParent(node);
 
         // Drill down on the new structure until we reach the parent of the node to delete.
-        let deleteNodeParent: Node;
+        let deleteNodeParent: Node = state.productTree.get(path.pop());
         while (path.length > 0) {
-          deleteNodeParent = state.productTree.get(path.pop());
+          deleteNodeParent = deleteNodeParent.children.get(path.pop());
         }
 
         // Delete the node.

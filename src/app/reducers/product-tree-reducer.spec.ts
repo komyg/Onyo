@@ -67,7 +67,41 @@ fdescribe('Product Tree Reducer', () => {
       expect(parentNode.children.has(441)).toBeFalsy();
 
       parentNode = newState.productTree.get(28);
-      expect(parentNode.children.has(456)).toBeFalsy();
+      expect(parentNode.children.has(456)).toBeTruthy();
+
+    });
+
+    it('should delete a 3rd level (choosable) node', () => {
+
+      let parentNode: Node = initialStateMap.get(26).children.get(441);
+      const nodeToDelete: Node = parentNode.children.get(442);
+      const action = new productTreeActions.DeleteBranchAction(nodeToDelete);
+
+      const newState = productTreeReducer(initialState, action);
+
+      parentNode = newState.productTree.get(26).children.get(441);
+      expect(parentNode.children.has(442)).toBeFalsy();
+
+      parentNode = newState.productTree.get(28);
+      expect(parentNode.children.has(456)).toBeTruthy();
+
+    });
+
+    it('should delete a 4th level (simple) node', () => {
+
+      let parentNode: Node = initialStateMap.get(26).children.get(441).children.get(442);
+      const nodeToDelete: Node = parentNode.children.get(443);
+      const action = new productTreeActions.DeleteBranchAction(nodeToDelete);
+
+      const newState = productTreeReducer(initialState, action);
+
+      parentNode = newState.productTree.get(26).children.get(441).children.get(442);
+      expect(parentNode.children.has(443)).toBeFalsy();
+      expect(parentNode.children.has(444)).toBeTruthy();
+
+      parentNode = newState.productTree.get(28);
+      expect(parentNode.children.has(456)).toBeTruthy();
+
     });
 
   });

@@ -62,6 +62,19 @@ export class NodeAccordionComponent implements OnInit {
     return this.node.image !== '';
   }
 
+  /**
+   * Returns true if the add child button should be shown or not. This button should not
+   * be shown for simple products.
+   */
+  showAddChildButton(): boolean {
+    if (this.node.type === NodeType.simple) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+
   deleteButtonClick(event) {
     event.stopPropagation();
     this.store.dispatch(new productTreeActions.DeleteBranchAction(this.node));

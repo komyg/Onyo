@@ -20,9 +20,13 @@
 
         <!-- Buttons -->
         <div class="action-buttons col-4 text-right">
-          <button class="button button-add-child btn btn-outline-secondary" (click)="addChildClick($event)">
+
+          <!-- Add child button. Not shown for simple products. -->
+          <button *ngIf="showAddChildButton()" class="button button-add-child btn btn-outline-secondary" (click)="addChildClick($event)">
             <i class="fa fa-2x fa-plus-square-o icon" aria-hidden="true"></i>
           </button>
+
+          <!-- Delete branch button -->
           <button class="button button-delete-branch btn btn-outline-danger" (click)="deleteButtonClick($event)">
             <i class="fa fa-2x fa-times-circle-o icon" aria-hidden="true"></i>
           </button>

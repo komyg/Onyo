@@ -29,7 +29,6 @@
 
   .action-buttons {
     .button {
-      //padding: 14px 24px;
       border: 0 none;
 
       .active, :focus, :active:focus {
@@ -63,29 +62,7 @@
         text-decoration: none;
       }
 
-      //border-bottom: $bootstrap-panel-header-border;
-      // height: $card-title-height;
-      // font-size: $card-header-font-size;
-      // $vertical-padding: ($card-title-height - $card-header-font-size) / 2;
-      // padding: $vertical-padding 22px;
       background-color: $bootstrap-panel-header-bg;
     }
-
-    /*
-    ::ng-deep .card-title {
-      // font-weight: $font-normal;
-      // font-size: $card-header-font-size;
-      // text-transform: uppercase;
-      // opacity: 0.9;
-      // color: $content-text;
-    }*/
-
-    /*
-    ::ng-deep .card-primary {
-      .card-header {
-        background-color: $primary-bg;
-        border-color: $primary-bg;
-      }
-    }*/
   }
 }

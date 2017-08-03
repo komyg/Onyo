@@ -3,16 +3,33 @@
 
     <!-- Title -->
     <ng-template ngbPanelTitle>
-      <div class="title">
-        <img class="img" [src]="node.getImage()" />
-        <h6 class="title-text">{{ node.getName() }}</h6>
+      <div class="row mx-auto text-center">
+        <div class="col-8 title">
+          <div *ngIf="showImage(); else show_icon">
+            <img class="img" [src]="node.image" />
+          </div>
+          <ng-template #show_icon>
+            <i class="fa fa-2x fa-cutlery" aria-hidden="true"></i>
+          </ng-template>
+
+          <h6 class="title-text">{{ node.name }}</h6>
+        </div>
+
+        <div class="action-buttons col-4 text-right">
+          <button class="button btn btn-info">
+            <i class="fa fa-2x fa-plus-square-o icon" aria-hidden="true" (click)="addChildClick($event)"></i>
+          </button>
+          <button class="button btn btn-danger" (click)="deleteButtonClick($event)">
+            <i class="fa fa-2x fa-times-circle-o icon" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
     </ng-template>
 
     <!-- Child nodes -->
     <ng-template ngbPanelContent class="content">
 
-      <div class="container">
+      <div>
         <h4 class="children-panel-title">{{ childrenPanelTitle }}</h4>
 
         <div *ngFor="let child of node.children.values()">

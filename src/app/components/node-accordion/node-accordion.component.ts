@@ -1,4 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import * as productTreeActions from '../../actions/product-tree.action';
+import { State } from '../../reducers/product-tree.reducer';
 
 import { Node } from '../../model/node';
 import { NodeType } from '../../model/node-type.enum';
@@ -15,7 +19,7 @@ export class NodeAccordionComponent implements OnInit {
   disabled: boolean;
   childrenPanelTitle: string;
 
-  constructor() { }
+  constructor(private store: Store<State>) { }
 
   ngOnInit() {
 
@@ -44,6 +48,32 @@ export class NodeAccordionComponent implements OnInit {
         break;
     }
 
+  }
+
+  showImage(): boolean {
+    return this.node.image !== '';
+  }
+
+  deleteButtonClick(event) {
+    event.stopPropagation();
+    this.store.dispatch(new productTreeActions.DeleteBranchAction(this.node));
+
+    return false;
+  }
+
+  addChildClick(event) {
+    event.stopPropagation();
+
+    const fakeChildData = {
+      numericalId: 321,
+      name: 'Cachorro Quente',
+      type: 'simple'
+    }
+    const fakeChild = new Node(fakeChildData);
+
+    this.store.dispatch(new productTreeActions.AddChildAction( { parent: this.node, newChild: fakeChild }));
+
+    return false;
   }
 
 }

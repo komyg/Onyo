@@ -6,6 +6,7 @@ import 'rxjs/add/operator/let';
 import * as productTreeOperations from '../actions/product-tree.action';
 
 import { Node } from '../model/node';
+import { NodeType } from '../model/node-type.enum';
 import { ProductTreeHelper } from '../helpers/product-tree.helper';
 
 export interface State {
@@ -34,7 +35,7 @@ export function productTreeReducer(state = initialState, action: productTreeOper
       return deleteBranch(action.payload, state);
 
     case productTreeOperations.ADD_CHILD:
-      return addChild(action.payload.parent, action.payload.child, state);
+      return addChild(action.payload.parent, action.payload.newChild, state);
 
     default:
       return state;
@@ -66,8 +67,41 @@ function deleteBranch(node: Node, state: State): State {
 }
 
 
-function addChild(parent: Node, child: Node, state: State): State {
+function addChild(parent: Node, newChild: Node, state: State): State {
 
-  return null;
+  if (parent.type === NodeType.simple) {
+    console.warn('Not allowed to add children to simple type objects');
+    return state;
+  }
+  else if (parent.children.has(newChild.id)) {
+    console.warn('Parent already has this child');
+    return state;
+  }
 
+  const newState = Object.assign({}, state);
+  const newStateParent: Node = ProductTreeHelper.findNodeById(parent.id, parent.parentId, newState.productTree);
+
+  // Set parent
+  newChild.parentId = newStateParent.id;
+  newChild.parent = newStateParent;
+
+  // Set type based on parent's type.
+  switch (newStateParent.type) {
+    case NodeType.category:
+      newChild.type = NodeType.menuItem;
+      break;
+
+    case NodeType.menuItem:
+      newChild.type = NodeType.choosable;
+      break;
+
+    case NodeType.choosable:
+      newChild.type = NodeType.simple;
+      break;
+  }
+
+  // Add child to parent
+  newStateParent.children.set(newChild.id, newChild);
+
+  return newState;
 }

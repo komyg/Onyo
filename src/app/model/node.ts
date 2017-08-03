@@ -97,6 +97,9 @@ export class Node {
   private setImgFromData(type: NodeType) {
 
     this.image = '';
+    if (!this.data.image) {
+      return;
+    }
 
     if (type === NodeType.category) {
       for (const image of this.data.image) {

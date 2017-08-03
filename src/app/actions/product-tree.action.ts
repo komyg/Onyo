@@ -46,7 +46,7 @@ export class DeleteBranchAction implements Action {
  */
 export class AddChildAction implements Action {
   readonly type = ADD_CHILD;
-  constructor (public payload: { parent: Node, child: Node }) { }
+  constructor (public payload: { parent: Node, newChild: Node }) { }
 }
 
 export type Actions = LoadProductTreeAction |

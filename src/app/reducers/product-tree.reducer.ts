@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs/Observable';
+import { createSelector, createFeatureSelector } from '@ngrx/store';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/let';
@@ -9,6 +10,10 @@ import { Node } from '../model/node';
 import { NodeType } from '../model/node-type.enum';
 import { ProductTreeHelper } from '../helpers/product-tree.helper';
 
+export interface AppState {
+  productTree: State;
+}
+
 export interface State {
   productTree: Map<number, Node>;
   errorMsg: string;
@@ -18,6 +23,9 @@ const initialState: State = {
   productTree: new Map<number, Node>(),
   errorMsg: ''
 };
+
+export const selectFeature = createFeatureSelector<State>('productTree');
+export const selectFeatureProductTree = createSelector(selectFeature, (state: State) => state.productTree);
 
 export function productTreeReducer(state = initialState, action: productTreeOperations.Actions): State {
 

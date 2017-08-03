@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { Node } from '../../model/node';
 
 import * as productTreeActions from '../../actions/product-tree.action';
-import { State } from '../../reducers/product-tree.reducer';
+import * as productTreeReducer from '../../reducers/product-tree.reducer';
 
 @Component({
   selector: 'app-product-edit',
@@ -15,16 +15,16 @@ import { State } from '../../reducers/product-tree.reducer';
 export class ProductEditComponent implements OnInit, OnDestroy {
 
   categoryMap: Map<number, Node>;
-  categoryObs$;
+  categoryObs$: Observable<Map<number, Node>>;
   categoryObsSubscription;
 
-  constructor(private store: Store<State>) { }
+  constructor(private store: Store<productTreeReducer.AppState>) { }
 
   ngOnInit() {
     // Retrieve data from the backend.
-    this.categoryObs$ = this.store.select('productTree');
-    this.categoryObsSubscription = this.categoryObs$.subscribe((res: State) => {
-      this.categoryMap = res.productTree;
+    this.categoryObs$ = this.store.select(productTreeReducer.selectFeatureProductTree);
+    this.categoryObsSubscription = this.categoryObs$.subscribe((res: Map<number, Node>) => {
+      this.categoryMap = res;
     }, (error) => {
       console.error(error);
     });

@@ -53,6 +53,13 @@ export class ProductTreeHelper {
     while (searchArray.length > 0) {
 
       node = searchArray.shift();
+
+      // During testing we can have leaf nodes that don't have a children Map,
+      // so we should guard for this.
+      if (node.children.has === undefined) {
+        continue;
+      }
+
       if (node.children.has(nodeId)) {
 
         // Check parent node.

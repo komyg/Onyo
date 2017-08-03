@@ -21,6 +21,7 @@ import { NodeAccordionComponent } from './components/node-accordion/node-accordi
 
 import { productTreeReducer } from './reducers/product-tree.reducer';
 import { ProductTreeEffect } from './effects/product-tree.effect';
+import { MapToArrayAsyncPipe } from './pipes/map-to-array-async.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProductTreeEffect } from './effects/product-tree.effect';
     SidebarComponent,
     PageTopComponent,
     ProductEditComponent,
-    NodeAccordionComponent
+    NodeAccordionComponent,
+    MapToArrayAsyncPipe
   ],
   imports: [
     BrowserModule,

@@ -15,15 +15,15 @@ import { State } from '../../reducers/product-tree.reducer';
 export class ProductEditComponent implements OnInit, OnDestroy {
 
   categoryMap: Map<number, Node>;
-  categoryObs: Observable<Map<number, Node>>;
+  categoryObs$;
   categoryObsSubscription;
 
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
     // Retrieve data from the backend.
-    this.categoryObs = this.store.select('productTree');
-    this.categoryObsSubscription = this.categoryObs.subscribe((res: any) => {
+    this.categoryObs$ = this.store.select('productTree');
+    this.categoryObsSubscription = this.categoryObs$.subscribe((res: State) => {
       this.categoryMap = res.productTree;
     }, (error) => {
       console.error(error);

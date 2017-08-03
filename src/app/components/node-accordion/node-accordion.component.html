@@ -3,26 +3,31 @@
 
     <!-- Title -->
     <ng-template ngbPanelTitle>
-      <div class="row mx-auto text-center">
+      <div class="row mx-auto">
         <div class="col-8 title">
+
           <div *ngIf="showImage(); else show_icon">
             <img class="img" [src]="node.image" />
           </div>
+
+          <!-- Show an icon if an image is not available -->
           <ng-template #show_icon>
-            <i class="fa fa-2x fa-cutlery" aria-hidden="true"></i>
+              <i class="fa fa-3x fa-cutlery icon" aria-hidden="true"></i>
           </ng-template>
 
           <h6 class="title-text">{{ node.name }}</h6>
         </div>
 
+        <!-- Buttons -->
         <div class="action-buttons col-4 text-right">
-          <button class="button btn btn-info">
+          <button class="button button-add-child btn btn-outline-secondary">
             <i class="fa fa-2x fa-plus-square-o icon" aria-hidden="true" (click)="addChildClick($event)"></i>
           </button>
-          <button class="button btn btn-danger" (click)="deleteButtonClick($event)">
+          <button class="button button-delte-branch btn btn-outline-danger" (click)="deleteButtonClick($event)">
             <i class="fa fa-2x fa-times-circle-o icon" aria-hidden="true"></i>
           </button>
         </div>
+
       </div>
     </ng-template>
 

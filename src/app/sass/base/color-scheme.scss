@@ -62,6 +62,8 @@ $activelink: #285eb8;
 $hoverlink: darken($activelink, 20%);
 
 $shadow-color: black;
+$add-child-button-color: #eff5ff;
+
 
 // main background
 @mixin body-bg() {

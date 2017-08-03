@@ -16,20 +16,13 @@ export class NodeAccordionComponent implements OnInit {
 
   @Input() node: Node;
 
-  disabled: boolean;
   childrenPanelTitle: string;
 
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
 
-    if (this.node.children.size > 0) {
-      this.disabled = false;
-    }
-    else {
-      this.disabled = true;
-    }
-
+    // Don't show any title for accordions of simple products (they don't have children)
     switch (this.node.getType()) {
       case NodeType.category:
         this.childrenPanelTitle = 'Itens do Menu';
@@ -50,6 +43,21 @@ export class NodeAccordionComponent implements OnInit {
 
   }
 
+  /**
+   * The accodion should be disabled if it doesn't have any children.
+   */
+  isDisabled(): boolean {
+    if (this.node.children.size > 0) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+
+  /**
+   * Returns true if there is an image to be displayed, otherwise retuns false.
+   */
   showImage(): boolean {
     return this.node.image !== '';
   }

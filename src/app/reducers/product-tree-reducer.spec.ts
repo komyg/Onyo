@@ -1,6 +1,7 @@
 import { State, productTreeReducer } from './product-tree.reducer';
 import * as productTreeActions from '../actions/product-tree.action';
 
+import { ProductTreeHelper } from '../helpers/product-tree.helper';
 import { Node } from '../model/node';
 import { NodeType } from '../model/node-type.enum';
 
@@ -9,33 +10,7 @@ describe('Product Tree Reducer', () => {
   let initialStateMap: Map<number, Node>;
 
   beforeEach(() => {
-    const data = require('../../assets/test/product-tree-map-category.json');
-    const menuItemData = require('../../assets/test/product-tree-map-menu-item-26.json');
-    const choosableData_441 = require('../../assets/test/product-tree-map-choosable-26-441.json');
-    const choosableData_542 = require('../../assets/test/product-tree-map-choosable-26-542.json');
-    const simpleData_441 = require('../../assets/test/product-tree-map-simple-26-441.json');
-    const simpleData_542 = require('../../assets/test/product-tree-map-simple-26-542.json');
-    const menuItemData_28 = require('../../assets/test/product-tree-map-menu-item-28.json');
-
-    initialStateMap = new Map<number, Node>(data);
-
-    let node: Node = initialStateMap.get(26);
-    node.children = new Map<number, Node>(menuItemData);
-
-    node = node.children.get(441);
-    node.children = new Map<number, Node>(choosableData_441);
-
-    node = node.children.get(442);
-    node.children = new Map<number, Node>(simpleData_441);
-
-    node = initialStateMap.get(26).children.get(542);
-    node.children = new Map<number, Node>(choosableData_542);
-
-    node = node.children.get(409);
-    node.children = new Map<number, Node>(simpleData_542);
-
-    node = initialStateMap.get(28);
-    node.children = new Map<number, Node>(menuItemData_28);
+    initialStateMap = ProductTreeHelper.createTestTree();
   });
 
   describe('DELETE_BRANCH Action', () => {

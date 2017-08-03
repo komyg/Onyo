@@ -79,4 +79,41 @@ export class ProductTreeHelper {
     return undefined;
   }
 
+  /**
+   * Load a test product tree from the available test data.
+   */
+  public static createTestTree(): Map<number, Node> {
+
+    // Load the data from the test json files.
+    const data = require('../../assets/test/product-tree-map-category.json');
+    const menuItemData = require('../../assets/test/product-tree-map-menu-item-26.json');
+    const choosableData_441 = require('../../assets/test/product-tree-map-choosable-26-441.json');
+    const choosableData_542 = require('../../assets/test/product-tree-map-choosable-26-542.json');
+    const simpleData_441 = require('../../assets/test/product-tree-map-simple-26-441.json');
+    const simpleData_542 = require('../../assets/test/product-tree-map-simple-26-542.json');
+    const menuItemData_28 = require('../../assets/test/product-tree-map-menu-item-28.json');
+
+    const producTree = new Map<number, Node>(data);
+
+    let node: Node = producTree.get(26);
+    node.children = new Map<number, Node>(menuItemData);
+
+    node = node.children.get(441);
+    node.children = new Map<number, Node>(choosableData_441);
+
+    node = node.children.get(442);
+    node.children = new Map<number, Node>(simpleData_441);
+
+    node = producTree.get(26).children.get(542);
+    node.children = new Map<number, Node>(choosableData_542);
+
+    node = node.children.get(409);
+    node.children = new Map<number, Node>(simpleData_542);
+
+    node = producTree.get(28);
+    node.children = new Map<number, Node>(menuItemData_28);
+
+    return producTree;
+  }
+
 }

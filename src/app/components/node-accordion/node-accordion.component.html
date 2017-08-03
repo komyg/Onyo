@@ -1,5 +1,5 @@
 <ngb-accordion class="node-accodion">
-  <ngb-panel [disabled]="disabled">
+  <ngb-panel [disabled]="isDisabled()">
 
     <!-- Title -->
     <ng-template ngbPanelTitle>
@@ -23,7 +23,7 @@
           <button class="button button-add-child btn btn-outline-secondary" (click)="addChildClick($event)">
             <i class="fa fa-2x fa-plus-square-o icon" aria-hidden="true"></i>
           </button>
-          <button class="button button-delte-branch btn btn-outline-danger" (click)="deleteButtonClick($event)">
+          <button class="button button-delete-branch btn btn-outline-danger" (click)="deleteButtonClick($event)">
             <i class="fa fa-2x fa-times-circle-o icon" aria-hidden="true"></i>
           </button>
         </div>

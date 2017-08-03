@@ -1,7 +1,5 @@
 # Onyo
 
-## Overview
-
 This project is a proof of concept for Onyo of a frontend to edit a restaurant menu. It was created using Angular 4 and Bootstrap 4.
 
 Currently the frontend loads the menu data from the Onyo backend and supports removing or adding a product.

@@ -14,7 +14,7 @@ Currently the frontend loads the menu data from the Onyo backend and supports re
 
 To execute this project on a local machine you need [Node.js, NPM](https://docs.npmjs.com/getting-started/installing-node) and [Angular CLI](https://cli.angular.io/).
 
-Once all these depenencies are installed, clone or download the project source on your local computer then run the command: `npm install` from a console. Once all the packages are in place, run one of the commands below.
+Once all of these depenencies are installed, clone or download the project on your local computer then run the command: `npm install` from a console. Once all the packages are in place, run one of the commands below.
 
 ### Development server
 
